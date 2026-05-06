@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaynã Pereira | Desenvolvedor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav id="menu">
+            <div class="logo">KAYNÃ<span>.DEV</span></div>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="section-container fade-in">
+            <div class="sobre-content">
+                <div class="texto">
+                    <h1>Kaynã Pereira</h1>
+                    <p class="tagline">Engenharia de Software & Desenvolvimento</p>
+                    <p>Sou um profissional em início de carreira na área de Tecnologia da Informação, com grande interesse em desenvolvimento de software e análise de sistemas. Busco construir soluções eficientes e aprimorar continuamente minhas habilidades lógicas e técnicas para resolver problemas complexos do mercado.</p>
+                </div>
+                <div class="imagem-perfil">
+                    <img src="imagens/foto-pessoal.png" alt="Foto de Kaynã Pereira">
+                </div>
+            </div>
+        </section>
+
+        <section id="formacao" class="section-container fade-in">
+            <h2>Minha Formação</h2>
+            
+            <div class="formacao-wrapper">
+                <div class="formacao-bloco">
+                    <h3>Formação Acadêmica</h3>
+                    <div class="card">
+                        <h4>Bacharelado em Ciência da Computação</h4>
+                        <p>Centro Universitário Internacional UNINTER</p>
+                        <span class="status">Em andamento</span>
+                    </div>
+                    <div class="card">
+                        <h4>Ensino Médio Integrado</h4>
+                        <p>Escola Quinze de Outubro</p>
+                        <span class="status">Concluído em 2024</span>
+                    </div>
+                </div>
+
+                <div class="formacao-bloco">
+                    <h3>Idiomas</h3>
+                    <div class="card idioma-card">
+                        <h4>Inglês</h4>
+                        <p>Nível Avançado</p>
+                    </div>
+                    <div class="card idioma-card">
+                        <h4>Português</h4>
+                        <p>Nativo / Fluente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section-container fade-in">
+            <h2>Portfólio</h2>
+            <div class="portfolio-grid">
+                <div class="projeto-card">
+                    <div class="projeto-icon">🌐</div>
+                    <div class="projeto-info">
+                        <h3>Portfólio Web Pessoal</h3>
+                        <p>Desenvolvimento frontend puro deste site utilizando HTML5 semântico, CSS3 (Flexbox/Grid) e JavaScript para validações, sem o uso de frameworks. Focado em responsividade e design minimalista.</p>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-icon">💻</div>
+                    <div class="projeto-info">
+                        <h3>Projetos Universitários</h3>
+                        <p>Implementações algorítmicas e exercícios acadêmicos desenvolvidos no curso de Ciência da Computação, abordando lógica de programação, métodos numéricos e orientação a objetos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-container fade-in">
+            <h2>Contato</h2>
+            <div class="contato-wrapper">
+                <p class="contato-desc">Tem uma oportunidade na área de TI ou deseja trocar ideias sobre tecnologia? Envie uma mensagem.</p>
+                <form id="formContato">
+                    <input type="text" id="nome" placeholder="Seu Nome Completo" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <textarea id="mensagem" placeholder="Sua Mensagem..." rows="5" required></textarea>
+                    <button type="submit" id="btnEnviar">Enviar Mensagem</button>
+                </form>
+                <div id="resultado"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kaynã Pereira. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
