@@ -1,4 +1,6 @@
-/* Definições Gerais */
+/* =========================================
+   VARIÁVEIS DE CORES E RESET BÁSICO
+   ========================================= */
 :root {
     --bg-color: #0b0b0b;
     --card-bg: #161616;
@@ -7,6 +9,7 @@
     --secondary-text: #a0a0a0;
 }
 
+/* Reseta margens e define o box-sizing e a rolagem suave */
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +24,13 @@ body {
     line-height: 1.6;
 }
 
-/* Header & Menu */
+/* =========================================
+   ESTILOS DO CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
 header {
     background: rgba(11, 11, 11, 0.95);
     padding: 20px 10%;
-    position: fixed;
+    position: fixed; /* Mantém o menu fixo no topo */
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -63,7 +68,9 @@ nav a {
 
 nav a:hover { color: var(--accent-color); }
 
-/* Layout das Seções */
+/* =========================================
+   ESTILOS GERAIS DAS SEÇÕES
+   ========================================= */
 .section-container {
     padding: 120px 10% 80px;
     max-width: 1200px;
@@ -77,7 +84,9 @@ h2 {
     padding-left: 15px;
 }
 
-/* Seção Sobre */
+/* =========================================
+   SEÇÃO: SOBRE MIM
+   ========================================= */
 .sobre-content {
     display: flex;
     align-items: center;
@@ -99,7 +108,9 @@ h2 {
 
 .imagem-perfil img:hover { border-color: var(--accent-color); transform: translateY(-5px); }
 
-/* Seção Formação */
+/* =========================================
+   SEÇÃO: FORMAÇÃO (Uso de Flexbox)
+   ========================================= */
 .formacao-wrapper {
     display: flex;
     gap: 40px;
@@ -133,7 +144,9 @@ h2 {
 .idioma-card { display: flex; justify-content: space-between; align-items: center; }
 .idioma-card p { margin: 0; color: var(--accent-color); font-weight: bold; }
 
-/* Grid de Portfólio */
+/* =========================================
+   SEÇÃO: PORTFÓLIO (Uso de CSS Grid)
+   ========================================= */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -153,7 +166,9 @@ h2 {
 .projeto-info h3 { margin-bottom: 10px; }
 .projeto-info p { color: var(--secondary-text); font-size: 0.95rem; }
 
-/* Formulário de Contato */
+/* =========================================
+   SEÇÃO: CONTATO E RODAPÉ
+   ========================================= */
 .contato-desc { margin-bottom: 30px; color: var(--secondary-text); }
 form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; }
 
@@ -191,7 +206,9 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animações (Requisito extra atendido) */
+/* =========================================
+   ANIMAÇÕES
+   ========================================= */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -201,4 +218,35 @@ footer {
 .fade-in.visivel {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVIDADE PARA MOBILE (SMARTPHONES)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Ajusta o cabeçalho e empilha o menu */
+    header { padding: 15px 5%; }
+    nav { flex-direction: column; gap: 10px; }
+    nav ul { flex-wrap: wrap; gap: 15px; justify-content: center;}
+    nav a { font-size: 0.8rem; }
+
+    /* Empilha a foto e o texto na seção Sobre Mim */
+    .sobre-content {
+        flex-direction: column-reverse; /* Coloca a foto em cima e o texto embaixo */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .texto h1 { font-size: 2.5rem; }
+
+    /* Garante que a foto não vaze da tela */
+    .imagem-perfil img {
+        width: 100%;
+        max-width: 250px;
+        height: 250px;
+    }
+
+    /* Reduz os espaçamentos laterais das seções */
+    .section-container { padding: 100px 5% 60px; }
+    h2 { font-size: 1.8rem; }
 }
